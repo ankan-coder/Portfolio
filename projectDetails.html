@@ -15,6 +15,16 @@
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#00abf0" />
 
+    <!-- Canonical URL (Fallback) -->
+    <link rel="canonical" href="https://www.ankanchakraborty.site/projectDetails.html" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.ankanchakraborty.site/projectDetails.html" />
+    <meta property="og:title" content="Project Details | Ankan Chakraborty - MERN Stack Developer" />
+    <meta property="og:description" content="Detailed information about Ankan Chakraborty's projects including tech stack, features, and achievements." />
+    <meta property="og:image" content="https://www.ankanchakraborty.site/images/AnkanPF.JPG" />
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./Favicons/icon.ico" />
 
@@ -72,31 +82,7 @@
             }
         }
 
-        /* Navigation */
-        .navbar {
-            background: rgba(8, 27, 41, 0.9) !important;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            padding: 15px 0;
-        }
 
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: #00abf0 !important;
-        }
-
-        .navbar-nav .nav-link {
-            color: #ffffff !important;
-            font-weight: 500;
-            margin: 0 10px;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #00abf0 !important;
-        }
 
         /* Back Button */
         .back-btn {
@@ -323,6 +309,8 @@
             font-size: 1.2rem;
         }
     </style>
+    <script src="./js/navbar.js" defer></script>
+    <script src="./js/scrollToTop.js" defer></script>
 </head>
 
 <body>
@@ -330,27 +318,8 @@
     <div class="bg-animation"></div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="./index.html">Ankan.</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./portfolio.html">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contactMe.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <portfolio-navbar></portfolio-navbar>
+    <scroll-to-top></scroll-to-top>
 
     <!-- Project Details Section -->
     <section class="project-details">
@@ -512,6 +481,48 @@
                     "Streamlined cubicle allocation process reducing administrative overhead",
                     "Provided transparent system for students and administrators"
                 ]
+            },
+            "bsrising": {
+                title: "BSRising — Trading, Investment & Wealth Management",
+                duration: "2025 - 2026",
+                techStack: ["Next.js", "React", "Tailwind CSS", "Node.js", "Vercel", "SEO Optimization"],
+                description: "Developed a premium wealth advisory and stock trading platform for BSRising India (SEBI License INH000019220) as a freelance project. Features custom client booking systems, responsive stock and mutual fund research trackers, and market analysis dashboards.",
+                features: [
+                    "Full content management system for financial analysts to post stock advisory details",
+                    "Interactive SIP & Mutual Fund calculators built with React",
+                    "SEBI license compliant disclosures and automated running ticker banner",
+                    "Responsive consultant booking system and customer inquiry lead capture pipeline",
+                    "High performance caching and optimized load time for real-time market updates"
+                ],
+                links: [
+                    { text: "Visit Website", url: "https://www.bsrising.in/", icon: "fas fa-globe" }
+                ],
+                achievements: [
+                    "Deployed the official digital advisory hub for SEBI-registered advisory BSRising India",
+                    "Significantly boosted search engine ranking with semantic structure and custom metadata",
+                    "Reduced customer consultation request latency with instant email and dashboard alerts"
+                ]
+            },
+            "vsrising": {
+                title: "VS Rising — NISM Certified Stock Market Mentorship",
+                duration: "2025 - 2026",
+                techStack: ["Next.js", "Tailwind CSS", "React", "NISM Integration", "JSON-LD Structured Schema", "Vercel"],
+                description: "Created a stock market mentorship and proprietary trading advisory portal for VSRising Advisory (NISM Certified) as a freelance project. Integrates structured course catalogs, custom booking systems, and recommendation portals for prop trading firms.",
+                features: [
+                    "Course registration portal for Option Trading and Technical Analysis mentorship modules",
+                    "Structured guide section recommending top Indian stock brokers (Zerodha Kite, Groww, Upstox)",
+                    "Proprietary trading evaluation scaling guide for global prop firms (FTMO, FundedNext)",
+                    "Fully-featured customer support integration via WhatsApp and automated response triggers",
+                    "Robust JSON-LD structured schema integration for rich snippet index results"
+                ],
+                links: [
+                    { text: "Visit Website", url: "https://www.vsrising.in/", icon: "fas fa-globe" }
+                ],
+                achievements: [
+                    "Successfully launched premium landing hub for NISM-certified stock mentorship platform",
+                    "Achieved maximum performance audit score on Next.js deployment",
+                    "Streamlined 1-to-1 student mentorship signups via direct CRM integration"
+                ]
             }
         };
 
@@ -541,6 +552,66 @@
             }
 
             const project = projectsDetailedData[projectId];
+
+            // Dynamically update document title and meta description for search crawlers
+            document.title = `${project.title} | Project Details - Ankan Chakraborty`;
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.setAttribute("content", project.description.substring(0, 150) + "...");
+            }
+
+            // Dynamically update keywords based on project details
+            const metaKeywords = document.querySelector('meta[name="keywords"]');
+            if (metaKeywords && project.techStack) {
+                metaKeywords.setAttribute("content", `${project.title}, ${project.techStack.join(', ')}, Ankan Chakraborty Projects`);
+            }
+
+            // Dynamically update Open Graph Meta Tags
+            const ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle) ogTitle.setAttribute("content", `${project.title} | Project Details`);
+
+            const ogDescription = document.querySelector('meta[property="og:description"]');
+            if (ogDescription) ogDescription.setAttribute("content", project.description.substring(0, 150) + "...");
+
+            const ogUrl = document.querySelector('meta[property="og:url"]');
+            if (ogUrl) ogUrl.setAttribute("content", `https://www.ankanchakraborty.site/projectDetails.html?project=${projectId}`);
+
+            // Dynamically update Twitter Card Meta Tags
+            const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+            if (twitterTitle) twitterTitle.setAttribute("content", `${project.title} | Project Details`);
+
+            const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+            if (twitterDescription) twitterDescription.setAttribute("content", project.description.substring(0, 150) + "...");
+
+            // Dynamically set canonical link to avoid duplicate parameter pages
+            let canonicalLink = document.querySelector('link[rel="canonical"]');
+            if (!canonicalLink) {
+                canonicalLink = document.createElement('link');
+                canonicalLink.rel = 'canonical';
+                document.head.appendChild(canonicalLink);
+            }
+            canonicalLink.href = `https://www.ankanchakraborty.site/projectDetails.html?project=${projectId}`;
+
+            // Dynamically inject JSON-LD Schema for rich search snippet indexing
+            const schemaData = {
+                "@context": "https://schema.org",
+                "@type": "CreativeWork",
+                "name": project.title,
+                "description": project.description,
+                "creator": {
+                    "@type": "Person",
+                    "name": "Ankan Chakraborty"
+                },
+                "programmingLanguage": project.techStack
+            };
+            let scriptTag = document.getElementById("projectSchema");
+            if (!scriptTag) {
+                scriptTag = document.createElement("script");
+                scriptTag.id = "projectSchema";
+                scriptTag.type = "application/ld+json";
+                document.head.appendChild(scriptTag);
+            }
+            scriptTag.text = JSON.stringify(schemaData);
 
             const techStackHTML = project.techStack.map(tech => `<span class="tech-badge">${tech}</span>`).join('');
             const featuresHTML = project.features.map(feature => `<li><i class="fas fa-check-circle"></i><span>${feature}</span></li>`).join('');

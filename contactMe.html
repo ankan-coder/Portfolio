@@ -1,38 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- SEO Meta Tags -->
-    <title>Contact Ankan Chakraborty | Get In Touch - MERN Stack Developer</title>
-    <meta name="description" content="Get in touch with Ankan Chakraborty for collaboration, project inquiries, or opportunities. Contact via email, phone, or message form. Based in IIIT Guwahati, Assam, India." />
-    <meta name="keywords" content="Contact Ankan Chakraborty, Hire MERN Developer, Web Developer Contact, Collaboration, Project Inquiry, IIIT Guwahati Contact" />
+    <title>
+      Contact Ankan Chakraborty | Get In Touch - MERN Stack Developer
+    </title>
+    <meta
+      name="description"
+      content="Get in touch with Ankan Chakraborty for collaboration, project inquiries, or opportunities. Contact via email, phone, or message form. Based in IIIT Guwahati, Assam, India."
+    />
+    <meta
+      name="keywords"
+      content="Contact Ankan Chakraborty, Hire MERN Developer, Web Developer Contact, Collaboration, Project Inquiry, IIIT Guwahati Contact"
+    />
     <meta name="author" content="Ankan Chakraborty" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#00abf0" />
-    
+
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.ankanchakraborty.site/contactMe.html" />
-    
+    <link
+      rel="canonical"
+      href="https://www.ankanchakraborty.site/contactMe.html"
+    />
+
+    <!-- JSON-LD Structured Data for Contact Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Ankan Chakraborty",
+      "description": "Get in touch with Ankan Chakraborty for collaboration, project inquiries, or full-stack developer opportunities.",
+      "url": "https://www.ankanchakraborty.site/contactMe.html",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Ankan Chakraborty",
+        "email": "mailto:ankang670@gmail.com",
+        "telephone": "+919932749416",
+        "jobTitle": "MERN Stack Developer"
+      }
+    }
+    </script>
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.ankanchakraborty.site/contactMe.html" />
-    <meta property="og:title" content="Contact Ankan Chakraborty | Get In Touch" />
-    <meta property="og:description" content="Get in touch with Ankan Chakraborty for collaboration, project inquiries, or opportunities. Contact via email, phone, or message form." />
-    <meta property="og:image" content="https://www.ankanchakraborty.site/images/AnkanPF.JPG" />
+    <meta
+      property="og:url"
+      content="https://www.ankanchakraborty.site/contactMe.html"
+    />
+    <meta
+      property="og:title"
+      content="Contact Ankan Chakraborty | Get In Touch"
+    />
+    <meta
+      property="og:description"
+      content="Get in touch with Ankan Chakraborty for collaboration, project inquiries, or opportunities. Contact via email, phone, or message form."
+    />
+    <meta
+      property="og:image"
+      content="https://www.ankanchakraborty.site/images/AnkanPF.JPG"
+    />
     <meta property="og:site_name" content="Ankan Chakraborty Portfolio" />
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Contact Ankan Chakraborty | Get In Touch" />
-    <meta name="twitter:description" content="Get in touch with Ankan Chakraborty for collaboration, project inquiries, or opportunities." />
-    <meta name="twitter:image" content="https://www.ankanchakraborty.site/images/AnkanPF.JPG" />
-    
+    <meta
+      name="twitter:title"
+      content="Contact Ankan Chakraborty | Get In Touch"
+    />
+    <meta
+      name="twitter:description"
+      content="Get in touch with Ankan Chakraborty for collaboration, project inquiries, or opportunities."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.ankanchakraborty.site/images/AnkanPF.JPG"
+    />
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./Favicons/icon.ico" />
-    
+
     <!-- External Stylesheets -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -52,7 +102,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Font Awesome -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       rel="stylesheet"
     />
     <!-- Google Fonts -->
@@ -69,83 +119,74 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
       rel="stylesheet"
     />
-    <style>
-      /* Navigation */
-      .navbar {
-        background: rgba(8, 27, 41, 0.9) !important;
-        backdrop-filter: blur(10px);
-        transition: all 0.3s ease;
-        padding: 15px 0;
-      }
 
-      .navbar-brand {
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: #00abf0 !important;
-      }
-
-      .navbar-nav .nav-link {
-        color: #ffffff !important;
-        font-weight: 500;
-        margin: 0 10px;
-        transition: all 0.3s ease;
-        position: relative;
-      }
-
-      .navbar-nav .nav-link::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: 0;
-        left: 50%;
-        background: #00abf0;
-        transition: all 0.3s ease;
-        transform: translateX(-50%);
-      }
-
-      .navbar-nav .nav-link:hover::after {
-        width: 100%;
-      }
-
-      .navbar-nav .nav-link:hover {
-        color: #00abf0 !important;
-      }
-    </style>
     <link rel="stylesheet" href="./CSS/style-contactMe.css" />
+    <script src="./js/navbar.js" defer></script>
+    <script src="./js/scrollToTop.js" defer></script>
 
     <!-- Firebase Scripts -->
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
   </head>
   <body style="background: #081b29">
+    <!-- Ambient Glows -->
+    <div class="ambient-glows">
+      <div class="glow-1"></div>
+      <div class="glow-2"></div>
+    </div>
+
+    <!-- Floating SVG Shapes -->
+    <div class="floating-shapes">
+      <svg
+        class="floating-shape shape-1"
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          r="40"
+          stroke="#00abf0"
+          stroke-width="2"
+          stroke-dasharray="6 4"
+        />
+      </svg>
+      <svg
+        class="floating-shape shape-2"
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polygon
+          points="50,15 90,85 10,85"
+          stroke="#9333ea"
+          stroke-width="2"
+          stroke-dasharray="4 2"
+        />
+      </svg>
+      <svg
+        class="floating-shape shape-3"
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="20"
+          y="20"
+          width="60"
+          height="60"
+          rx="8"
+          stroke="#00abf0"
+          stroke-width="2"
+          transform="rotate(45 50 50)"
+        />
+      </svg>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="./index.html">Ankan.</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./portfolio.html">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="./contactMe.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <portfolio-navbar></portfolio-navbar>
+    <scroll-to-top></scroll-to-top>
     <!-- Hero Section -->
     <div
       class="hero-section"
@@ -182,9 +223,21 @@
                   <div class="contact-icon">
                     <i class="fas fa-envelope"></i>
                   </div>
-                  <div class="contact-text">
-                    <h4>Email</h4>
-                    <p>ankang670@gmail.com</p>
+                  <div
+                    class="contact-text d-flex align-items-center justify-content-between w-100 flex-wrap gap-2"
+                  >
+                    <div>
+                      <h4>Email</h4>
+                      <p id="email-text" class="m-0">ankang670@gmail.com</p>
+                    </div>
+                    <button
+                      class="copy-btn copy-tooltip"
+                      onclick="copyEmail()"
+                      type="button"
+                      title="Copy email address"
+                    >
+                      <i class="far fa-copy"></i> Copy
+                    </button>
                   </div>
                 </div>
 
@@ -214,6 +267,46 @@
                     <h4>Location</h4>
                     <p>IIIT Guwahati, Assam, India</p>
                   </div>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div
+                class="social-links-container mt-4"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <h4
+                  class="mb-3"
+                  style="color: #ededed; font-size: 1.1rem; font-weight: 600"
+                >
+                  Connect with me
+                </h4>
+                <div class="social-links">
+                  <a
+                    href="https://www.linkedin.com/in/ankan-chkrbrty/"
+                    target="_blank"
+                    class="social-link"
+                    title="LinkedIn"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="https://github.com/ankan-coder"
+                    target="_blank"
+                    class="social-link"
+                    title="GitHub"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a
+                    href="https://twitter.com/ankan_coder"
+                    target="_blank"
+                    class="social-link"
+                    title="Twitter / X"
+                  >
+                    <i class="fab fa-x-twitter"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -317,15 +410,6 @@
       </div>
     </div>
 
-    <!-- Floating Animation Elements -->
-    <div class="floating-elements">
-      <div class="floating-circle circle-1"></div>
-      <div class="floating-circle circle-2"></div>
-      <div class="floating-circle circle-3"></div>
-      <div class="floating-triangle triangle-1"></div>
-      <div class="floating-triangle triangle-2"></div>
-    </div>
-
     <!-- Success Modal -->
     <div
       class="modal fade"
@@ -335,9 +419,19 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-dark text-light">
+        <div
+          class="modal-content bg-dark text-light border"
+          style="
+            border-color: rgba(0, 171, 240, 0.2) !important;
+            border-radius: 16px;
+          "
+        >
           <div class="modal-header border-0">
-            <h5 class="modal-title text-success" id="successModalLabel">
+            <h5
+              class="modal-title text-success"
+              id="successModalLabel"
+              style="font-weight: 600"
+            >
               <i class="fas fa-check-circle me-2"></i>Message Sent!
             </h5>
             <button
@@ -347,7 +441,7 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body text-light" style="opacity: 0.85">
             <p>
               Thank you for reaching out! I've received your message and will
               get back to you as soon as possible.
@@ -357,6 +451,13 @@
             <button
               type="button"
               class="btn btn-success"
+              style="
+                background: #00abf0;
+                border: none;
+                font-weight: 500;
+                padding: 8px 20px;
+                border-radius: 8px;
+              "
               data-bs-dismiss="modal"
             >
               Close
@@ -390,6 +491,27 @@
           navbar.style.background = "rgba(8, 27, 41, 0.9)";
         }
       });
+
+      // Copy email to clipboard function
+      function copyEmail() {
+        const emailText = document.getElementById("email-text").innerText;
+        navigator.clipboard
+          .writeText(emailText)
+          .then(() => {
+            const copyBtn = document.querySelector(".copy-btn");
+            copyBtn.classList.add("show-tooltip");
+            const icon = copyBtn.querySelector("i");
+            icon.className = "fas fa-check";
+
+            setTimeout(() => {
+              copyBtn.classList.remove("show-tooltip");
+              icon.className = "far fa-copy";
+            }, 2000);
+          })
+          .catch((err) => {
+            console.error("Could not copy text: ", err);
+          });
+      }
     </script>
 
     <!-- Firebase and Contact Form Script -->
